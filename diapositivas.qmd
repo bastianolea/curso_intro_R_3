@@ -8,6 +8,7 @@ format:
     theme: [default, estilos.scss]
     transition: slide
     highlight-style: "github-dark"
+    link-external-newwindow: true
     # footer: "Bastián Olea Herrera — [https://bastianolea.rbind.io](https://bastianolea.rbind.io)"
 execute: 
   echo: true
