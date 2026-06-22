@@ -25,7 +25,7 @@
     "href": "diapositivas.html#conceptos-clave",
     "title": "Introducción al análisis de datos con R, 3ª versión",
     "section": "Conceptos clave",
-    "text": "Conceptos clave\n\n\nScript\nArchivo de texto .R en el que escribimos nuestro código, en pasos, y siguiendo un orden lógico.\n\n\n\n\nConsola\nEs la forma directa de interactuar con R, un comando a la vez, con resultados efímeros.\n\n\n\n\nProyecto\nArchivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que reúne todas las piezas de nuestro análisis."
+    "text": "Conceptos clave\n\n\n\nScript\nArchivo de texto .R en el que escribimos nuestro código, en pasos, y siguiendo un orden lógico.\n\n\n\n\nConsola\nEs la forma directa de interactuar con R, un comando a la vez, con resultados efímeros.\n\n\n\n\nProyecto\nArchivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que reúne todas las piezas de nuestro análisis."
   },
   {
     "objectID": "diapositivas.html#rstudio-1",

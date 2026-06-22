@@ -73,6 +73,17 @@ Existen muchas diferencias entre _hacer_ algo y **programarlo:**
 
 ----
 
+### Flujo de trabajo
+
+::: {.fragment}
+![](imagenes/diagrama_1.png){.centro style="width: 800px;"}
+:::
+
+::: {.fragment}
+![](imagenes/diagrama_2.png){.centro style="width: 540px;"}
+:::
+
+----
 
 ## ¿Qué es R?
 
@@ -149,11 +160,40 @@ Muestra de algunas [aplicaciones](https://bastianolea.github.io/shiny_apps/), [g
 
 
 
+# RStudio
+
+::::: {.columns}
+
+:::: {.column width="55%"}
+
+RStudio es una IDE (entorno de desarrollo integrado) que nos permite escribir código en R de forma más cómoda, organizada, y visual.
+
+::: {.incremental}
+- Es la forma más popular de usar R
+- Lanzado en 2011
+- Software libre (licencia de código abierto AGPL)
+- También existen alternativas, como [Positron](https://positron.posit.co)
+:::
+
+::: {.boton .fragment}
+[{{< fa circle-arrow-down >}} Descargar RStudio](https://posit.co/download/rstudio-desktop/)
+:::
+
+::::
+
+:::: {.column width="45%"}
+![](imagenes/logo_rstudio.png){.rosa style="height: 200px; margin-top:-36px;"}
+::::
+
+:::::
+
+
 ----
 
 
-
 ## Conceptos clave
+
+<br>
 
 ::: {.fragment}
 ![](imagenes/icono_script.png){.izq style="margin: 10px; width: 110px;"}
@@ -184,40 +224,8 @@ Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que
 :::
 
 
-# RStudio
-
-::::: {.columns}
-
-:::: {.column width="55%"}
-
-RStudio es una IDE (entorno de desarrollo integrado) que nos permite escribir código en R de forma más cómoda, organizada, y visual.
-
-::: {.incremental}
-- Entorno de desarrollo integrado (IDE) enfocado en R
-- Lanzado en 2011
-- Software libre (licencia de código abierto AGPL)
-:::
-
-::: {.boton .fragment}
-[{{< fa circle-arrow-down >}} Descargar RStudio](https://posit.co/download/rstudio-desktop/)
-:::
-
-::::
-
-:::: {.column width="45%"}
-![](imagenes/logo_rstudio.png){.rosa style="height: 200px; margin-top:-36px;"}
-::::
-
-:::::
-
-
-
-
-
-
-
-
 ----
+
 
 ## Paneles de RStudio
 
@@ -250,7 +258,7 @@ RStudio es una IDE (entorno de desarrollo integrado) que nos permite escribir c�
 ----
 
 
-### Conceptos
+### Conceptos de RStudio
 
 ::: {.fragment .pad}
 [1]{.circulo} **Panel de scripts:** los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando `control + enter`, o el botón _Run_.
@@ -273,24 +281,22 @@ RStudio es una IDE (entorno de desarrollo integrado) que nos permite escribir c�
 
 ### Consola y scripts
 
-
 ![](imagenes/rstudio_script.png){.absolute top=5% right=-20%}
-
-
 
 :::: {.columns}
 
 ::: {.column}
 
 ::: {.incremental}
-- Todos los **comandos** se ejecutan por medio de la consola
-- Pero al ejecutar código en la consola, el código no se guarda!
-- Para **guardar** el código, escribimos en **scripts**
-- Escribimos las **instrucciones** en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡
+- Todos los **comandos** se ejecutan por medio de la **consola** (abajo), que es donde vive R
+- Al ejecutar código en la consola, el código no se guarda, sólo se ejecuta!
+- Para **guardar** el código, escribimos en **scripts** (arriba)
+- Escribimos el código en un script (arriba), y cuando se lo pidamos (botón _Run_ o `control` + `enter`), RStudio se encarga de **ejecutar** el código en la consola (abajo)
 :::
 
 :::
 ::::
+
 
 ----
 

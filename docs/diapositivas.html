@@ -252,6 +252,16 @@ Bastián Olea Herrera
 <li class="fragment">Resultados <strong>replicables</strong> 🔄 que dan paso a la <strong>automatización</strong> 🏭</li>
 </ul>
 </section>
+<section class="slide level2">
+
+<h3 id="flujo-de-trabajo">Flujo de trabajo</h3>
+<div class="fragment">
+<p><img data-src="imagenes/diagrama_1.png" class="centro" style="width: 800px;"></p>
+</div>
+<div class="fragment">
+<p><img data-src="imagenes/diagrama_2.png" class="centro" style="width: 540px;"></p>
+</div>
+</section>
 <section id="qué-es-r" class="slide level2">
 <h2>¿Qué es R?</h2>
 <div class="columns">
@@ -304,8 +314,28 @@ Bastián Olea Herrera
 <p>Muestra de algunas <a href="https://bastianolea.github.io/shiny_apps/">aplicaciones</a>, <a href="https://bastianolea.rbind.io/tags/gráficos/">gráficos</a>, <a href="https://bastianolea.rbind.io/tags/tablas/">tablas</a>, y <a href="https://bastianolea.rbind.io/tags/mapas/">mapas</a> hechos con R. También algunos <a href="https://bastianolea.rbind.io/blog/portafolio_trabajos_r/">trabajos</a> que he hecho.</p>
 </div>
 </section>
+<section>
+<section id="rstudio" class="title-slide slide level1 center">
+<h1>RStudio</h1>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>RStudio es una IDE (entorno de desarrollo integrado) que nos permite escribir código en R de forma más cómoda, organizada, y visual.</p>
+<ul>
+<li class="fragment">Es la forma más popular de usar R</li>
+<li class="fragment">Lanzado en 2011</li>
+<li class="fragment">Software libre (licencia de código abierto AGPL)</li>
+<li class="fragment">También existen alternativas, como <a href="https://positron.posit.co">Positron</a></li>
+</ul>
+<div class="boton fragment">
+<p><a href="https://posit.co/download/rstudio-desktop/"><i class="fa-solid fa-circle-arrow-down" aria-label="circle-arrow-down"></i> Descargar RStudio</a></p>
+</div>
+</div><div class="column" style="width:45%;">
+<p><img data-src="imagenes/logo_rstudio.png" class="rosa" style="height: 200px; margin-top:-36px;"></p>
+</div></div>
+</section>
 <section id="conceptos-clave" class="slide level2">
 <h2>Conceptos clave</h2>
+<p><br></p>
 <div class="fragment">
 <p><img data-src="imagenes/icono_script.png" class="izq" style="margin: 10px; width: 110px;"></p>
 <h4 id="script">Script</h4>
@@ -323,24 +353,6 @@ Bastián Olea Herrera
 <h4 id="proyecto">Proyecto</h4>
 <p>Archivo .Rproj que marca nuestro espacio de trabajo: una carpeta específica que reúne todas las piezas de nuestro análisis.</p>
 </div>
-</section>
-<section>
-<section id="rstudio" class="title-slide slide level1 center">
-<h1>RStudio</h1>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p>RStudio es una IDE (entorno de desarrollo integrado) que nos permite escribir código en R de forma más cómoda, organizada, y visual.</p>
-<ul>
-<li class="fragment">Entorno de desarrollo integrado (IDE) enfocado en R</li>
-<li class="fragment">Lanzado en 2011</li>
-<li class="fragment">Software libre (licencia de código abierto AGPL)</li>
-</ul>
-<div class="boton fragment">
-<p><a href="https://posit.co/download/rstudio-desktop/"><i class="fa-solid fa-circle-arrow-down" aria-label="circle-arrow-down"></i> Descargar RStudio</a></p>
-</div>
-</div><div class="column" style="width:45%;">
-<p><img data-src="imagenes/logo_rstudio.png" class="rosa" style="height: 200px; margin-top:-36px;"></p>
-</div></div>
 </section>
 <section id="paneles-de-rstudio" class="slide level2">
 <h2>Paneles de RStudio</h2>
@@ -363,7 +375,7 @@ Bastián Olea Herrera
 </section>
 <section class="slide level2">
 
-<h3 id="conceptos">Conceptos</h3>
+<h3 id="conceptos-de-rstudio">Conceptos de RStudio</h3>
 <div class="fragment pad">
 <p><span class="circulo">1</span> <strong>Panel de scripts:</strong> los archivos de texto con nuestro código. Podemos tener varias pestañas. Ejecutamos el código poniendo el cursor en la línea y presionando <code>control + enter</code>, o el botón <em>Run</em>.</p>
 </div>
@@ -384,10 +396,10 @@ Bastián Olea Herrera
 <div class="columns">
 <div class="column">
 <ul>
-<li class="fragment">Todos los <strong>comandos</strong> se ejecutan por medio de la consola</li>
-<li class="fragment">Pero al ejecutar código en la consola, el código no se guarda!</li>
-<li class="fragment">Para <strong>guardar</strong> el código, escribimos en <strong>scripts</strong></li>
-<li class="fragment">Escribimos las <strong>instrucciones</strong> en un script, y RStudio se encarga de pasarlos a la consola y ejecutarlos cuando se lo pidamos 💡</li>
+<li class="fragment">Todos los <strong>comandos</strong> se ejecutan por medio de la <strong>consola</strong> (abajo), que es donde vive R</li>
+<li class="fragment">Al ejecutar código en la consola, el código no se guarda, sólo se ejecuta!</li>
+<li class="fragment">Para <strong>guardar</strong> el código, escribimos en <strong>scripts</strong> (arriba)</li>
+<li class="fragment">Escribimos el código en un script (arriba), y cuando se lo pidamos (botón <em>Run</em> o <code>control</code> + <code>enter</code>), RStudio se encarga de <strong>ejecutar</strong> el código en la consola (abajo)</li>
 </ul>
 </div></div>
 </section>
