@@ -832,9 +832,8 @@ datos <- read.csv("carpeta/datos.csv")
 Probemos cargando unos datos!
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/pobreza/estimaciones_pobreza.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de pobreza en Excel</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/pobreza/estimaciones_pobreza.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de pobreza en Excel</a>
 :::
-
 
 :::  {.fragment}
 Cargamos los datos usando una función del paquete `{readxl}`:
@@ -1036,7 +1035,7 @@ resultado <- objeto |>
 [{{< fa file-lines >}} Ver tutorial](https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#datos)
 :::
 
-Usaremos los datos de **pobreza** del [Ministerio Desarrollo Social y Familia](https://bidat.gob.cl/directorio/Pobreza%20comunal/estimaciones-de-pobreza-comunal-2022) que vimos antes. Si no los cargaste, [descárgalos](https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/pobreza/estimaciones_pobreza.xlsx) y los cargas así:
+Usaremos los datos de **pobreza** del [Ministerio Desarrollo Social y Familia](https://bidat.gob.cl/directorio/Pobreza%20comunal/estimaciones-de-pobreza-comunal-2022) que vimos antes. Si no los cargaste, [descárgalos](https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/pobreza/estimaciones_pobreza.xlsx) y los cargas así:
 
 ```{r}
 library(dplyr)
@@ -1370,7 +1369,7 @@ datos |>
 Veamos los [datos de educación del **Censo 2024**](https://censo2024.ine.gob.cl/resultados/), que contienen la escolaridad promedio de cada comuna, por sexo.
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/educacion.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de educación en Excel</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/censo/educacion.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de educación en Excel</a>
 :::
 
 ```{r}
@@ -1407,7 +1406,7 @@ Para cruzar dos tablas de datos<br>usamos `left_join()` de `{dplyr}`
 <br>
 
 ::: {.fragment .boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/clasificacion/clasificacion.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de clasificación comunal en Excel</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/clasificacion/clasificacion.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de clasificación comunal en Excel</a>
 :::
 
 
@@ -1498,7 +1497,7 @@ library(tidyr)
 Veamos un ejemplo donde transformamos los [datos de **estimaciones de población** del INE](https://www.ine.gob.cl/estadisticas/sociales/demografia-y-vitales/proyecciones-de-poblacion), desde un formato **ancho** (años en columnas) a uno **largo** (años en filas).
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de estimaciones de población en Excel</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> {{< fa file-download >}} Descargar datos de estimaciones de población en Excel</a>
 :::
 
 :::: {.columns}
@@ -1553,19 +1552,19 @@ Algunos conjuntos de datos limpios para practicar
 
 
 ::: { .boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/clasificacion/clasificacion.xlsx" target="_blank"> {{< fa file-download >}} Clasificaciones comunales</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/clasificacion/clasificacion.xlsx" target="_blank"> {{< fa file-download >}} Clasificaciones comunales</a>
 :::
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> {{< fa file-download >}} Estimaciones de población</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> {{< fa file-download >}} Estimaciones de población</a>
 :::
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/educacion.xlsx" target="_blank"> {{< fa file-download >}} Escolaridad por comuna</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/censo/educacion.xlsx" target="_blank"> {{< fa file-download >}} Escolaridad por comuna</a>
 :::
 
 ::: {.boton}
-<a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/genero.xlsx" target="_blank"> {{< fa file-download >}} Población según género</a>
+<a href="https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/censo/genero.xlsx" target="_blank"> {{< fa file-download >}} Población según género</a>
 :::
 
 
@@ -1957,15 +1956,15 @@ mapa_datos |>
 
 
 ::: {.boton }
-[{{< fa file-lines >}} Variables educacionales Censo 2024](https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/P7_Educacion.xlsx)
+[{{< fa file-lines >}} Variables educacionales Censo 2024](https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/censo/P7_Educacion.xlsx)
 :::
 
 ::: {.boton }
-[{{< fa file-lines >}} Estimación de pobreza multidimensional 2022](https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx)
+[{{< fa file-lines >}} Estimación de pobreza multidimensional 2022](https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx)
 :::
 
 ::: {.boton }
-[{{< fa file-lines >}} Clasificaciones comunales 2024](https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/clasificacion/ClasificacionComunasPNDR_Censo2024.xlsx)
+[{{< fa file-lines >}} Clasificaciones comunales 2024](https://github.com/bastianolea/curso_intro_R_3/raw/master/datos/clasificacion/ClasificacionComunasPNDR_Censo2024.xlsx)
 :::
 
 Puedes encontrar más datos en mi [repositorio de datos sociales](https://bastianolea.github.io/datos_sociales/), en el [banco integrado de datos del Ministerio de Desarrollo](https://bidat.midesof.cl/), en los [datos abiertos del Estado Chile](https://datos.gob.cl/), y [muchos más](https://bastianolea.rbind.io/blog/r_introduccion/recursos_r/#datos).
