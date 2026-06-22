@@ -6,20 +6,23 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-969ddfa49e00a70eb3423444dbc81f6c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Bastián Olea Herrera">
-  <meta name="dcterms.date" content="2026-03-25">
-  <title>Introducción al análisis de datos con R, 2ª versión</title>
+  <meta name="dcterms.date" content="2026-06-22">
+  <title>Introducción al análisis de datos con R, 3ª versión</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -98,7 +101,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-6ccef190d9fc906153c333ce73b4462c.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-1b9e058261925599800e40fd19b81c4b.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -196,7 +199,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introducción al análisis de datos con R, <em>2ª versión</em></h1>
+  <h1 class="title">Introducción al análisis de datos con R, <em>3ª versión</em></h1>
   <p class="subtitle">Curso dirigido a personas de las Ciencias Sociales</p>
 
 <div class="quarto-title-authors">
@@ -207,27 +210,27 @@ Bastián Olea Herrera
 </div>
 </div>
 
-  <p class="date">2026-03-25</p>
+  <p class="date">2026-06-22</p>
 </section>
 <section id="inicio" class="slide level2">
 <h2>Inicio</h2>
 <p><span class="subtitulo">Bastián Olea Herrera</span></p>
 <p><a href="https://bastianolea.rbind.io">bastianolea.rbind.io</a></p>
 <div class="pad">
-<p>Encuentra todo sobre el curso <a href="https://bastianolea.rbind.io/blog/curso_gratis_r_intro_2/">en este post</a> de mi blog.</p>
+<p>Encuentra todo sobre el curso <a href="https://bastianolea.rbind.io/blog/curso_r_intro_3/">en este post</a> de mi blog.</p>
 </div>
 <div class="pad" style="max-width: 50%;">
 <div class="boton">
-<p><a href="https://bastianolea.rbind.io/blog/curso_gratis_r_intro_2/"><i class="fa-solid fa-book-open" aria-label="book-open"></i> Curso</a></p>
+<p><a href="https://bastianolea.rbind.io/blog/curso_r_intro_3/"><i class="fa-solid fa-book-open" aria-label="book-open"></i> Curso</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2"><i class="fa-solid fa-file-code" aria-label="file-code"></i> Código</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3"><i class="fa-solid fa-file-code" aria-label="file-code"></i> Código</a></p>
 </div>
 <div class="boton">
-<p><a href="https://www.youtube.com/@bastianolea/streams"><i class="fa-solid fa-video" aria-label="video"></i> Grabaciones</a></p>
+<p><a href="https://www.youtube.com/@bastianolea"><i class="fa-solid fa-video" aria-label="video"></i> Grabaciones</a></p>
 </div>
 <div class="boton">
-<p><a href="https://bastianolea.github.io/curso_intro_R_gratis_v2"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Diapositivas</a></p>
+<p><a href="https://bastianolea.github.io/curso_intro_R_3"><i class="fa-solid fa-chalkboard-user" aria-label="chalkboard-user"></i> Diapositivas</a></p>
 </div>
 <div class="boton">
 <p><a href="https://bastianolea.rbind.io/contacto/"><i class="fa-solid fa-envelope" aria-label="envelope"></i> Contacto</a></p>
@@ -763,7 +766,7 @@ Bastián Olea Herrera
 </div></div>
 </section></section>
 <section>
-<section id="datos" class="title-slide slide level1 center">
+<section id="datos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206461746162617365203e7d7d" class="title-slide slide level1 center">
 <h1>Datos <i class="fa-solid fa-database" aria-label="database"></i></h1>
 <p>Para cargar datos, tenemos que:</p>
 <ul>
@@ -773,7 +776,7 @@ Bastián Olea Herrera
 <li class="fragment">Conocer una <strong>función</strong> y posiblemente un <strong>paquete</strong> que lea ese formato de archivos</li>
 </ul>
 </section>
-<section id="cargar-datos" class="slide level2">
+<section id="cargar-datos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612066696c652d6578706f7274203e7d7d" class="slide level2">
 <h2>Cargar datos <i class="fa-solid fa-file-export" aria-label="file-export"></i></h2>
 <ul>
 <li>Las funciones de carga de datos usan como argumento la <strong>ruta</strong> del archivo.</li>
@@ -793,7 +796,7 @@ Bastián Olea Herrera
 </section>
 <section class="slide level2">
 
-<h3 id="paquetes-para-carga-de-datos">Paquetes para carga de datos <i class="fa-solid fa-laptop-file" aria-label="laptop-file"></i></h3>
+<h3 id="paquetes-para-carga-de-datos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206c6170746f702d66696c65203e7d7d">Paquetes para carga de datos <i class="fa-solid fa-laptop-file" aria-label="laptop-file"></i></h3>
 <p><img data-src="imagenes/paquetes_carga_datos.png" class="pad" style="height: 200px;"></p>
 <div class="pad">
 <ul>
@@ -809,7 +812,7 @@ Bastián Olea Herrera
 <h3 id="carga-de-datos-desde-excel">Carga de datos desde Excel</h3>
 <p>Probemos cargando unos datos!</p>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/pobreza/estimaciones_pobreza.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de pobreza en Excel</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/pobreza/estimaciones_pobreza.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de pobreza en Excel</a></p>
 </div>
 <div class="fragment">
 <p>Cargamos los datos usando una función del paquete <code>{readxl}</code>:</p>
@@ -982,7 +985,7 @@ Bastián Olea Herrera
 <div class="boton absolute" style="top: -1%; right: 0%; ">
 <p><a href="https://bastianolea.rbind.io/blog/r_introduccion/dplyr_intro/#datos"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Ver tutorial</a></p>
 </div>
-<p>Usaremos los datos de <strong>pobreza</strong> del <a href="https://bidat.gob.cl/directorio/Pobreza%20comunal/estimaciones-de-pobreza-comunal-2022">Ministerio Desarrollo Social y Familia</a> que vimos antes. Si no los cargaste, <a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/pobreza/estimaciones_pobreza.xlsx">descárgalos</a> y los cargas así:</p>
+<p>Usaremos los datos de <strong>pobreza</strong> del <a href="https://bidat.gob.cl/directorio/Pobreza%20comunal/estimaciones-de-pobreza-comunal-2022">Ministerio Desarrollo Social y Familia</a> que vimos antes. Si no los cargaste, <a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/pobreza/estimaciones_pobreza.xlsx">descárgalos</a> y los cargas así:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb59-2"><a></a><span class="fu">library</span>(readxl)</span>
@@ -1367,7 +1370,7 @@ Bastián Olea Herrera
 <h3 id="resumiendo-datos">Resumiendo datos</h3>
 <p>Veamos los <a href="https://censo2024.ine.gob.cl/resultados/">datos de educación del <strong>Censo 2024</strong></a>, que contienen la escolaridad promedio de cada comuna, por sexo.</p>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/censo/educacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de educación en Excel</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/educacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de educación en Excel</a></p>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a></a>educacion <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">"datos/censo/educacion.xlsx"</span>)</span>
@@ -1404,12 +1407,12 @@ Bastián Olea Herrera
 </div>
 <p><br></p>
 <div class="fragment boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/clasificacion/clasificacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de clasificación comunal en Excel</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/clasificacion/clasificacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de clasificación comunal en Excel</a></p>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="cruzando-datos">Cruzando datos <i class="fa-solid fa-table" aria-label="table"></i></h3>
+<h3 id="cruzando-datos-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661207461626c65203e7d7d">Cruzando datos <i class="fa-solid fa-table" aria-label="table"></i></h3>
 <p>Veamos un ejemplo donde cruzamos dos tablas, la de <strong>pobreza</strong> y una nueva de <strong>clasificación comunal</strong> (urbana, mixta, rural según la <a href="https://bibliotecadigital.odepa.gob.cl/handle/20.500.12650/74476">PNDR</a>), a partir de la columna que tienen en común: <code>codigo</code></p>
 <div class="fragment">
 <div class="cell">
@@ -1478,7 +1481,7 @@ Bastián Olea Herrera
 <h3 id="transformando-datos">Transformando datos</h3>
 <p>Veamos un ejemplo donde transformamos los <a href="https://www.ine.gob.cl/estadisticas/sociales/demografia-y-vitales/proyecciones-de-poblacion">datos de <strong>estimaciones de población</strong> del INE</a>, desde un formato <strong>ancho</strong> (años en columnas) a uno <strong>largo</strong> (años en filas).</p>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de estimaciones de población en Excel</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Descargar datos de estimaciones de población en Excel</a></p>
 </div>
 <div class="columns">
 <div class="column">
@@ -1538,16 +1541,16 @@ Bastián Olea Herrera
 <h3 id="datos-para-practicar">Datos para practicar</h3>
 <p>Algunos conjuntos de datos limpios para practicar</p>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/clasificacion/clasificacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Clasificaciones comunales</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/clasificacion/clasificacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Clasificaciones comunales</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Estimaciones de población</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/estimaciones/estimaciones_poblacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Estimaciones de población</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/censo/educacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Escolaridad por comuna</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/educacion.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Escolaridad por comuna</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/censo/genero.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Población según género</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/genero.xlsx" target="_blank"> <i class="fa-solid fa-file-download" aria-label="file-download"></i> Población según género</a></p>
 </div>
 </section></section>
 <section>
@@ -1889,19 +1892,19 @@ Bastián Olea Herrera
 </div>
 </div></div>
 </section>
-<section id="datos-para-practicar-1" class="slide level2">
+<section id="datos-para-practicar-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612066696c652d636f6465203e7d7d" class="slide level2">
 <h2>Datos para practicar <i class="fa-solid fa-file-code" aria-label="file-code"></i></h2>
 <div class="boton">
-<p><a href="https://raw.githubusercontent.com/bastianolea/curso_intro_R_gratis_v2/refs/heads/main/datos/estimaciones/estimaciones-y-proyecciones-base.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Estimaciones de población Censo</a></p>
+<p><a href="https://raw.githubusercontent.com/bastianolea/curso_intro_R_3/refs/heads/main/datos/estimaciones/estimaciones-y-proyecciones-base.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Estimaciones de población Censo</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/censo/P7_Educacion.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Variables educacionales Censo 2024</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/censo/P7_Educacion.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Variables educacionales Censo 2024</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Estimación de pobreza multidimensional 2022</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/pobreza/estimaciones_indice_pobreza_multidimensional_comunas_2022.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Estimación de pobreza multidimensional 2022</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2/raw/main/datos/clasificacion/ClasificacionComunasPNDR_Censo2024.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Clasificaciones comunales 2024</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3/raw/main/datos/clasificacion/ClasificacionComunasPNDR_Censo2024.xlsx"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Clasificaciones comunales 2024</a></p>
 </div>
 <p>Puedes encontrar más datos en mi <a href="https://bastianolea.github.io/datos_sociales/">repositorio de datos sociales</a>, en el <a href="https://bidat.midesof.cl/">banco integrado de datos del Ministerio de Desarrollo</a>, en los <a href="https://datos.gob.cl/">datos abiertos del Estado Chile</a>, y <a href="https://bastianolea.rbind.io/blog/r_introduccion/recursos_r/#datos">muchos más</a>.</p>
 
@@ -1941,13 +1944,13 @@ Bastián Olea Herrera
 <p><br></p>
 <div class="centrar">
 <div class="boton">
-<p><a href="https://bastianolea.rbind.io/clases/curso_gratis_r_intro_2/"><i class="fa-solid fa-book-open" aria-label="book-open"></i> Curso</a></p>
+<p><a href="https://bastianolea.rbind.io/clases/curso_intro_R_3/"><i class="fa-solid fa-book-open" aria-label="book-open"></i> Curso</a></p>
 </div>
 <div class="boton">
-<p><a href="https://github.com/bastianolea/curso_intro_R_gratis_v2"><i class="fa-solid fa-file-code" aria-label="file-code"></i> Código</a></p>
+<p><a href="https://github.com/bastianolea/curso_intro_R_3"><i class="fa-solid fa-file-code" aria-label="file-code"></i> Código</a></p>
 </div>
 <div class="boton">
-<p><a href="https://www.youtube.com/@bastianolea/streams"><i class="fa-solid fa-video" aria-label="video"></i> Grabaciones</a></p>
+<p><a href="https://www.youtube.com/@bastianolea"><i class="fa-solid fa-video" aria-label="video"></i> Grabaciones</a></p>
 </div>
 </div>
 
