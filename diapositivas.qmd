@@ -341,6 +341,17 @@ Cambiar de **proyecto** o crear uno nuevo
 ::::
 
 
+----
+
+### Inteligencia Artificial
+
+**Nuevo en RStudio:** _Posit Assistant,_ asistente de inteligencia artificial integrado con tu código y datos.
+
+![](imagenes/rstudio_posit_assistant.png){.centro style="width: 800px;"}
+
+Más información [en esta publicación.](https://bastianolea.rbind.io/blog/posit_assistant/)
+
+
 # Introducción a R
 
 
