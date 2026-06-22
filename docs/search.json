@@ -53,7 +53,7 @@
     "href": "diapositivas.html#operaciones-básicas",
     "title": "Introducción al análisis de datos con R, 3ª versión",
     "section": "Operaciones básicas",
-    "text": "Operaciones básicas\n\n Ver tutorial\n\n\n\n\nPodemos realizar cualquier operación matemática en R.\nPara ejecutar un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón Run, o las teclas control + enter.\nLo importante es que el cursor de texto | esté en cualquier lugar de la línea.\nEl resultado de todas las operaciones aparece en la consola.\n\n\n\n\n\n2 + 2 #suma\n\n[1] 4\n\n\n\n\n\n50 * 100 #multiplicación\n\n[1] 5000\n\n\n\n\n\n4556 - 1000 #resta\n\n[1] 3556\n\n\n\n\n\n6565 / 89 #división\n\n[1] 73.76404\n\n\n\n\n\n10^4 #potencias\n\n[1] 10000"
+    "text": "Operaciones básicas\n\n Ver tutorial\n\n\n\n\nPodemos realizar cualquier operación matemática en R.\nPara ejecutar un comando, pon el cursor de texto en la línea que desees ejecutar, o selecciónala, y presiona el botón Run, o las teclas control + enter.\nLo importante es que el cursor de texto | esté en cualquier lugar de la línea.\nEl resultado siempre aparecerá en la consola.\n\n\n\n\n\n2 + 2 #suma\n\n[1] 4\n\n\n\n50 * 100 #multiplicación\n\n[1] 5000\n\n\n\n4556 - 1000 #resta\n\n[1] 3556\n\n\n\n6565 / 89 #división\n\n[1] 73.76404\n\n\n\n10^4 #potencias\n\n[1] 10000"
   },
   {
     "objectID": "diapositivas.html#tipos-de-datos",
@@ -67,7 +67,7 @@
     "href": "diapositivas.html#objetos",
     "title": "Introducción al análisis de datos con R, 3ª versión",
     "section": "Objetos",
-    "text": "Objetos\nSe le llama objeto a cualquier dato, variable, o elemento que tengas en R.\nPodemos guardar todo como un objeto.\n\nPara crear un objeto, simplemente le damos un nombre y le asignamos un contenido.\n\nnombre ← contenido\n\n\n\n\n\n\nPara asignar algo a un objeto, usamos el operador &lt;-\n\n\ncifra &lt;- 4\n\n\n\n\n\n\n\nEl objeto cifra se crea cuando declaramos que va a contener el valor 4\n\n\ncifra\n\n[1] 4"
+    "text": "Objetos\nHasta ahora hemos trabajado con datos sueltos. Si queremos volver a usar un dato o resultado, debemos guardarlo en un objeto.\nSe le llama objeto a cualquier dato, variable, o elemento que guardemos en R.\n\nPara crear un objeto, simplemente le damos un nombre y le asignamos un valor o contenido.\n\nnombre ← contenido\n\n\n\n\n\n\nPara asignar algo a un objeto, usamos el operador &lt;-\n\n\nnumerito &lt;- 4\n\n\n\n\n\n\n\nEl objeto numerito se crea cuando declaramos que va a contener el valor 4, y luego podemos ejecutar numerito para obtener su contenido (4)\n\n\nnumerito\n\n[1] 4"
   },
   {
     "objectID": "diapositivas.html#comparaciones",

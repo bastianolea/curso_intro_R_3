@@ -125,7 +125,7 @@ R es un lenguaje de programación enfocado al **análisis de datos**, las **esta
 ::: {.cuadro} 
 [Gratuito]{.subtitulo}
 
-R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del _software libre_, así que nunca tendrás que pagar nada!
+R es un lenguaje de programación abierto y gratuito, mantenido por su propia comunidad de usuari@s. Al ser _software libre_, nunca tendrás que pagar nada!
 :::
 ::::
 
@@ -133,7 +133,7 @@ R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad
 ::: {.cuadro} 
 [Amigable]{.subtitulo}
 
-R fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta [más intuitivo](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#usabilidad) que otros lenguajes.
+R fue diseñado para el análisis de datos, y fue creado por y para personas de diversas disciplinas. Esto lo vuelve en la herramienta apropiada para trabajar con datos, más amigable e intuitivo que otros lenguajes.
 :::
 ::::
 
@@ -141,7 +141,7 @@ R fue creado para personas de distintas disciplinas, y al centrarse en los datos
 ::: {.cuadro} 
 [Reproducible]{.subtitulo}
 
-La gracia de R es [guardar todos los pasos de tu análisis](https://bastianolea.rbind.io/blog/2025-11-13/), lo que facilita corregirlos, [reutilizarlos](https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#procesos-reutilizables) para nuevos casos, y compartirlo con otros.
+La gracia de R es registrar todos los pasos de tu análisis, lo que facilita corregirlos, mejorarlos, reutilizarlos para nuevos casos, y compartirlos con otros.
 :::
 ::::
 
@@ -398,9 +398,9 @@ Veamos ahora los **elementos más básicos** del lenguaje R, para luego avanzar 
 
 ::: {.incremental}
 - Podemos realizar cualquier operación matemática en R.
-- Para **ejecutar** un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón _Run_, o las teclas `control + enter`.
-- Lo importante es que el cursor de texto `|` esté en cualquier lugar de la línea.
-- El **resultado** de todas las operaciones aparece en la **consola**.
+- Para **ejecutar** un comando, pon el cursor de texto en la línea que desees ejecutar, o selecciónala, y presiona el botón _Run_, o las teclas `control + enter`.
+- Lo importante es que el cursor de texto `|` esté en cualquier lugar de la **línea**.
+- El **resultado** siempre aparecerá en la **consola**.
 :::
 
 ::::
@@ -409,31 +409,34 @@ Veamos ahora los **elementos más básicos** del lenguaje R, para luego avanzar 
 
 ::: {.fragment} 
 
-::: {.pad}
+<br>
+
+
 ```{r}
+#| code-line-numbers: false
 2 + 2 #suma
 ```
-:::
-::: {.pad}
+
 ```{r}
+#| code-line-numbers: false
 50 * 100 #multiplicación
 ```
-:::
-::: {.pad}
+
 ```{r}
+#| code-line-numbers: false
 4556 - 1000 #resta
 ```
-:::
-::: {.pad}
+
 ```{r}
+#| code-line-numbers: false
 6565 / 89 #división
 ```
-:::
-::: {.pad}
+
 ```{r}
+#| code-line-numbers: false
 10^4 #potencias
 ```
-:::
+
 :::
 
 ::::
@@ -445,16 +448,20 @@ Veamos ahora los **elementos más básicos** del lenguaje R, para luego avanzar 
 ### Comentarios
 
 ::: {.incremental}
+- Si ejecutamos operaciones que son son válidas, obtenemos un **error**!
 - Los comentarios nos permiten poner texto en cualquier parte del script sin que afecte los cálculos.
 - También podemos poner un comentario al final de una línea sin que afecte el código
+- Usa los comentarios para describir lo que buscas hacer con el código
 :::
 
 
 ::: {.fragment}
 ```{r}
 #| eval: false
+
+# sumar 4 números
 1 + 1 + 1 + 1
-# comentario: quizás esto debería
+# quizás esto debería
 # ser de otra forma, porque
 # la verdad quedó bien mal...
 
@@ -510,13 +517,13 @@ TRUE FALSE TRUE
 
 ## Objetos
 
-Se le llama **objeto** a cualquier dato, variable, o elemento que tengas en R.
+Hasta ahora hemos trabajado con datos sueltos. Si queremos volver a usar un dato o resultado, debemos guardarlo en un **objeto**.
 
-Podemos guardar _todo_ como un objeto.
+Se le llama **objeto** a cualquier dato, variable, o elemento que **guardemos** en R.
 
 . . . 
 
-Para **crear** un objeto, simplemente le damos un nombre y le _asignamos_ un contenido.
+Para **crear** un objeto, simplemente le damos un nombre y le _asignamos_ un valor o contenido.
 
 ::: {style="max-width: 300px; margin: auto;"}
 **nombre** [←]{style="font-size: 130%;"} _contenido_
@@ -534,7 +541,7 @@ Para asignar algo a un objeto, usamos el operador `<-`
 ::: {.column}
 ```{r style="margin-left: 28px; margin-top:20px;"}
 #| code-line-numbers: false
-cifra <- 4
+numerito <- 4
 ```
 :::
 ::::
@@ -545,13 +552,13 @@ cifra <- 4
 
 :::: {.columns}
 ::: {.column .just-der}
-El objeto `cifra` se crea cuando declaramos que va a contener el valor `4`
+El objeto `numerito` se **crea** cuando declaramos que va a contener el **valor** `4`, y luego podemos ejecutar `numerito` para obtener su contenido (`4`)
 :::
 
 ::: {.column}
 ```{r style="margin-left: 28px; margin-top:20px;"}
 #| code-line-numbers: false
-cifra
+numerito
 ```
 :::
 ::::
@@ -569,7 +576,7 @@ cifra
 Con el _operador de **asignación**_ creamos objetos nuevos.
 
 ::: {.centrar style="font-size: 200%"}
-`->`
+`<-`
 :::
 
 ::: {.fragment}

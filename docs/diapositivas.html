@@ -291,19 +291,19 @@ Bastián Olea Herrera
 <div class="fragment">
 <div class="cuadro">
 <p><span class="subtitulo">Gratuito</span></p>
-<p>R es un lenguaje de programación abierto y gratuito, y es parte de la comunidad del <em>software libre</em>, así que nunca tendrás que pagar nada!</p>
+<p>R es un lenguaje de programación abierto y gratuito, mantenido por su propia comunidad de usuari@s. Al ser <em>software libre</em>, nunca tendrás que pagar nada!</p>
 </div>
 </div>
 <div class="fragment">
 <div class="cuadro">
 <p><span class="subtitulo">Amigable</span></p>
-<p>R fue creado para personas de distintas disciplinas, y al centrarse en los datos resulta <a href="https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#usabilidad">más intuitivo</a> que otros lenguajes.</p>
+<p>R fue diseñado para el análisis de datos, y fue creado por y para personas de diversas disciplinas. Esto lo vuelve en la herramienta apropiada para trabajar con datos, más amigable e intuitivo que otros lenguajes.</p>
 </div>
 </div>
 <div class="fragment">
 <div class="cuadro">
 <p><span class="subtitulo">Reproducible</span></p>
-<p>La gracia de R es <a href="https://bastianolea.rbind.io/blog/2025-11-13/">guardar todos los pasos de tu análisis</a>, lo que facilita corregirlos, <a href="https://bastianolea.rbind.io/blog/r_introduccion/por_que_r/#procesos-reutilizables">reutilizarlos</a> para nuevos casos, y compartirlo con otros.</p>
+<p>La gracia de R es registrar todos los pasos de tu análisis, lo que facilita corregirlos, mejorarlos, reutilizarlos para nuevos casos, y compartirlos con otros.</p>
 </div>
 </div>
 </section>
@@ -468,50 +468,41 @@ Bastián Olea Herrera
 <div class="column" style="padding-right:28px;">
 <ul>
 <li class="fragment">Podemos realizar cualquier operación matemática en R.</li>
-<li class="fragment">Para <strong>ejecutar</strong> un comando, pon el cursor de texto en la línea o expresión que desees ejecutar, o selecciónala, y presiona el botón <em>Run</em>, o las teclas <code>control + enter</code>.</li>
-<li class="fragment">Lo importante es que el cursor de texto <code>|</code> esté en cualquier lugar de la línea.</li>
-<li class="fragment">El <strong>resultado</strong> de todas las operaciones aparece en la <strong>consola</strong>.</li>
+<li class="fragment">Para <strong>ejecutar</strong> un comando, pon el cursor de texto en la línea que desees ejecutar, o selecciónala, y presiona el botón <em>Run</em>, o las teclas <code>control + enter</code>.</li>
+<li class="fragment">Lo importante es que el cursor de texto <code>|</code> esté en cualquier lugar de la <strong>línea</strong>.</li>
+<li class="fragment">El <strong>resultado</strong> siempre aparecerá en la <strong>consola</strong>.</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="fragment">
-<div class="pad">
+<p><br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co">#suma</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="co">#suma</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
 </div>
-</div>
-<div class="pad">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="dv">50</span> <span class="sc">*</span> <span class="dv">100</span> <span class="co">#multiplicación</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="dv">50</span> <span class="sc">*</span> <span class="dv">100</span> <span class="co">#multiplicación</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5000</code></pre>
 </div>
 </div>
-</div>
-<div class="pad">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="dv">4556</span> <span class="sc">-</span> <span class="dv">1000</span> <span class="co">#resta</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="dv">4556</span> <span class="sc">-</span> <span class="dv">1000</span> <span class="co">#resta</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3556</code></pre>
 </div>
 </div>
-</div>
-<div class="pad">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="dv">6565</span> <span class="sc">/</span> <span class="dv">89</span> <span class="co">#división</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="dv">6565</span> <span class="sc">/</span> <span class="dv">89</span> <span class="co">#división</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 73.76404</code></pre>
 </div>
 </div>
-</div>
-<div class="pad">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="dv">10</span><span class="sc">^</span><span class="dv">4</span> <span class="co">#potencias</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="sc">^</span><span class="dv">4</span> <span class="co">#potencias</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10000</code></pre>
-</div>
 </div>
 </div>
 </div>
@@ -521,17 +512,20 @@ Bastián Olea Herrera
 
 <h3 id="comentarios">Comentarios</h3>
 <ul>
+<li class="fragment">Si ejecutamos operaciones que son son válidas, obtenemos un <strong>error</strong>!</li>
 <li class="fragment">Los comentarios nos permiten poner texto en cualquier parte del script sin que afecte los cálculos.</li>
 <li class="fragment">También podemos poner un comentario al final de una línea sin que afecte el código</li>
+<li class="fragment">Usa los comentarios para describir lo que buscas hacer con el código</li>
 </ul>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb11-2"><a></a><span class="co"># comentario: quizás esto debería</span></span>
-<span id="cb11-3"><a></a><span class="co"># ser de otra forma, porque</span></span>
-<span id="cb11-4"><a></a><span class="co"># la verdad quedó bien mal...</span></span>
-<span id="cb11-5"><a></a></span>
-<span id="cb11-6"><a></a><span class="dv">1</span> <span class="sc">*</span> <span class="dv">4</span> <span class="co"># así queda mucho mejor</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># sumar 4 números</span></span>
+<span id="cb11-2"><a></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb11-3"><a></a><span class="co"># quizás esto debería</span></span>
+<span id="cb11-4"><a></a><span class="co"># ser de otra forma, porque</span></span>
+<span id="cb11-5"><a></a><span class="co"># la verdad quedó bien mal...</span></span>
+<span id="cb11-6"><a></a></span>
+<span id="cb11-7"><a></a><span class="dv">1</span> <span class="sc">*</span> <span class="dv">4</span> <span class="co"># así queda mucho mejor</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -567,10 +561,10 @@ Bastián Olea Herrera
 </section>
 <section id="objetos" class="slide level2">
 <h2>Objetos</h2>
-<p>Se le llama <strong>objeto</strong> a cualquier dato, variable, o elemento que tengas en R.</p>
-<p>Podemos guardar <em>todo</em> como un objeto.</p>
+<p>Hasta ahora hemos trabajado con datos sueltos. Si queremos volver a usar un dato o resultado, debemos guardarlo en un <strong>objeto</strong>.</p>
+<p>Se le llama <strong>objeto</strong> a cualquier dato, variable, o elemento que <strong>guardemos</strong> en R.</p>
 <div class="fragment">
-<p>Para <strong>crear</strong> un objeto, simplemente le damos un nombre y le <em>asignamos</em> un contenido.</p>
+<p>Para <strong>crear</strong> un objeto, simplemente le damos un nombre y le <em>asignamos</em> un valor o contenido.</p>
 <div style="max-width: 300px; margin: auto;">
 <p><strong>nombre</strong> <span style="font-size: 130%;">←</span> <em>contenido</em></p>
 </div>
@@ -582,7 +576,7 @@ Bastián Olea Herrera
 <p>Para asignar algo a un objeto, usamos el operador <code>&lt;-</code></p>
 </div><div class="column">
 <div class="cell" style="margin-left: 28px; margin-top:20px;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>cifra <span class="ot">&lt;-</span> <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>numerito <span class="ot">&lt;-</span> <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 <p><br></p>
@@ -590,10 +584,10 @@ Bastián Olea Herrera
 <div class="fragment">
 <div class="columns">
 <div class="column just-der">
-<p>El objeto <code>cifra</code> se crea cuando declaramos que va a contener el valor <code>4</code></p>
+<p>El objeto <code>numerito</code> se <strong>crea</strong> cuando declaramos que va a contener el <strong>valor</strong> <code>4</code>, y luego podemos ejecutar <code>numerito</code> para obtener su contenido (<code>4</code>)</p>
 </div><div class="column">
 <div class="cell" style="margin-left: 28px; margin-top:20px;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>cifra</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>numerito</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
@@ -609,7 +603,7 @@ Bastián Olea Herrera
 </div>
 <p>Con el <em>operador de <strong>asignación</strong></em> creamos objetos nuevos.</p>
 <div class="centrar" style="font-size: 200%">
-<p><code>-&gt;</code></p>
+<p><code>&lt;-</code></p>
 </div>
 <div class="fragment">
 <p>Se escribe con:</p>
