@@ -14,3 +14,4 @@ datos/censo/viviendas_censo2024.csv
 .httr-oauth
 .DS_Store
 .quarto
+.positai
