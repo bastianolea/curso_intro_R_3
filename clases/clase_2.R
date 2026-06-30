@@ -11,7 +11,7 @@ datos <- read_xlsx("estimaciones_pobreza.xlsx")
 datos
 
 # previsualizar datos en una nueva pestaña
-View(datos)
+# View(datos)
 
 datos
 
@@ -415,33 +415,84 @@ clasificacion_2
 datos_cat |> 
   left_join(clasificacion_2)
 
+datos_cat
+clasificacion_2
 
-
-
+# arreglar las comunas de la tabla de clasificación
 clasificacion_3 <- clasificacion_2 |> 
   mutate(comuna = str_to_title(comuna)) |> 
-  mutate(comuna = str_replace(comuna, "O’higgins", "O’Higgins"))
+  mutate(comuna = str_replace(comuna, "O'higgins", "O’higgins"))
 
 datos_cat |>
-  filter(str_detect(comuna, "higgins"))
-# 
+  filter(str_detect(comuna, "iggins"))
+
 clasificacion_3 |>
-  filter(str_detect(comuna, "higgins"))
+  filter(str_detect(comuna, "iggins"))
 
-
+# las dos tablas a cruzar
 datos_cat
 
+clasificacion_3
 
-datos_3 <- datos_cat |> 
+# revisar que son la misma cantidad
+n_comunas_tabla_a <- datos_cat |> 
+  distinct(comuna) |> 
+  nrow()
+
+n_comunas_tabla_b <- clasificacion_3 |> 
+  distinct(comuna) |> 
+  nrow()
+
+n_comunas_tabla_a == n_comunas_tabla_b
+
+
+# cruzar tablas
+datos_cruce <- datos_cat |> 
   left_join(clasificacion_3)
 
-datos_3 |> 
+datos_cruce
+
+datos_cruce
+
+datos_cruce |> 
   count(clasificacion)
 
-datos_3 |> 
+datos_cruce |> 
+  distinct(clasificacion)
+
+datos_cruce |> 
   filter(is.na(clasificacion))
 
-datos_3 |> 
+datos_cruce |> 
+  summarize(sum(personas))
+
+datos_cruce |> 
   group_by(clasificacion) |> 
   summarize(sum(personas))
+
+datos_cruce |> 
+  group_by(clasificacion)
   
+datos_cruce |> 
+  mutate(total = sum(personas))
+
+datos_cruce |> 
+  group_by(region) |> 
+  mutate(total = sum(personas))
+
+datos_rank <- datos_cruce |> 
+  # select(region, personas) |> 
+  arrange(region, desc(personas)) |> 
+  group_by(region) |> 
+  mutate(ranking = 1:n()) |> 
+  ungroup() |> 
+  print(n=40)
+
+datos_rank |> 
+  filter(ranking <= 3)
+
+
+datos_rank |> 
+  select(region, comuna, personas, clasificacion) |> 
+  pivot_wider(names_from = clasificacion, values_from = personas)
+
