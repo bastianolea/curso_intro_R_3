@@ -1,498 +1,217 @@
-# instalar paquete
+# Clase 2: Manipulación de datos con dplyr
+# Introducción al análisis de datos con R para ciencias sociales
+# 2026-06-24
+# Bastián Olea Herrera - https://bastianolea.rbind.io - bastianolea@gmail.com
+
+# diapositivas: https://bastianolea.github.io/curso_intro_R_3/
+
+# en esta clase aprenderemos a explorar, seleccionar, ordenar y filtrar datos
+# usando el paquete {dplyr}, que vimos brevemente al final de la clase anterior
+
+
+# cargar paquetes ----
+# recuerda: install.packages() solo la primera vez; library() cada vez que abres R
+
 # install.packages("readxl")
+library("readxl")  # para cargar archivos Excel
 
-library("readxl") # cargar paquete para usarlo
-library("dplyr")
-library("stringr")
+# install.packages("dplyr")
+library("dplyr")   # para manipular datos
 
-# cargar datos excel
+# install.packages("stringr")
+library("stringr") # para trabajar con texto
+
+
+# cargar datos ----
+
+# creamos el objeto "datos" cargando el archivo Excel
 datos <- read_xlsx("estimaciones_pobreza.xlsx")
 
+# ver los datos en la consola
 datos
 
-# previsualizar datos en una nueva pestaña
-# View(datos)
-
-datos
-
-
-
-datos |> select(comuna, personas, porcentaje)
-
-datos |> 
-  # ordenar observaciones
-  arrange(desc(porcentaje)) |> 
-  # seleccionar columnas relevantes
-  select(region, comuna, porcentaje)
-
-datos |> 
-  select(comuna, region, personas, porcentaje) |> 
-  arrange(porcentaje)
-
-46 > 1
-
-edad <- 33
-
-edad > 20
-
-edad < 30
-
-
-4 == 3
-4 == 4
-4 != 2
-
-edades <- c(54, 34, 65, 21, 32)
-edades > 40
-
-
-datos |> 
-  filter(personas > 90000)
-
-datos |> 
-  filter(personas < 900)
-
-
-datos |> 
-  filter(comuna == "La Florida")
-
-umbral_pobreza <- 0.3
-
-0.3 >= 0.3
-
-datos |> 
-  filter(porcentaje >= umbral_pobreza)
-
-datos |> 
-  select(personas, porcentaje)
-
-datos |> 
-  filter(region == 'Biobío')
-
-
+# glimpse() muestra todas las columnas, sus tipos y los primeros valores
 datos |> glimpse()
 
-datos |> slice(100)
+# View() abre los datos en una pestaña, como una planilla (útil para explorar)
+# View(datos)
 
+
+# el conector o pipe |> ----
+# el conector |> encadena funciones de forma más legible
+# se lee: "al objeto 'datos' luego le aplico esta función"
+# se escribe con control + shift + m (o cmd + shift + m)
+
+# seleccionar columnas ----
+# select() nos permite quedarnos solo con las columnas que nos interesan
+
+# seleccionar columnas por nombre
+datos |> select(comuna, personas, porcentaje)
+
+# seleccionar columnas por posición (número de columna)
+datos |> select(1, 2, 3)
+
+# seleccionar un rango de columnas
+datos |> select(1:4)
+
+# excluir una columna usando el signo -
+datos |> select(-codigo)
+
+# seleccionar solo columnas numéricas
+datos |> select(where(is.numeric))
+
+# combinar: la columna "comuna" y todas las numéricas
+datos |> select(comuna, where(is.numeric))
+
+# seleccionar columnas cuyo nombre empieza con cierto texto
+datos |> select(starts_with("limite"))
+
+# excluir columnas cuyo nombre empieza con cierto texto
+datos |> select(-starts_with("limite"))
+
+
+# ordenar filas ----
+# arrange() ordena las filas según los valores de una columna
+
+# ordenar de menor a mayor porcentaje de pobreza
+datos |> arrange(porcentaje)
+
+# desc() ordena de mayor a menor
+datos |> arrange(desc(porcentaje))
+
+# podemos encadenar funciones con el pipe:
+# ordenar de mayor a menor y luego quedarnos con algunas columnas
+datos |>
+  arrange(desc(porcentaje)) |>
+  select(region, comuna, porcentaje)
+
+
+# operadores lógicos ----
+# antes de filtrar, veamos cómo R evalúa condiciones verdaderas (TRUE) o falsas (FALSE)
+
+46 > 1  # mayor que
+
+edad <- 33
+edad > 20 # ¿es mayor que 20? -> TRUE
+edad < 30 # ¿es menor que 30? -> FALSE
+
+4 == 4  # igual a (se escribe con dos signos ==) -> TRUE
+4 == 3  # -> FALSE
+4 != 2  # distinto de (!=) -> TRUE
+
+# los operadores también funcionan sobre todos los valores de un vector
+edades <- c(54, 34, 65, 21, 32)
+edades > 40 # entrega un TRUE o FALSE por cada elemento
+
+
+# filtrar filas ----
+# filter() se queda solo con las filas que cumplen una condición
+
+# comunas con más de 90.000 personas en situación de pobreza
+datos |> filter(personas > 90000)
+
+# comunas con menos de 900 personas
+datos |> filter(personas < 900)
+
+# filtrar por texto: una comuna específica (usamos == también para texto)
+datos |> filter(comuna == "La Florida")
+
+# filtrar por una región
+datos |> filter(region == "Biobío")
+
+# podemos usar un objeto como umbral dentro del filtro
+umbral_pobreza <- 0.3
+
+datos |> filter(porcentaje >= umbral_pobreza)
+
+
+# extraer filas y columnas ----
+
+# slice() extrae filas según su posición
+datos |> slice(100)   # la fila 100
+datos |> slice(1:10)  # de la fila 1 a la 10
+
+# los rangos con : generan una secuencia de números
 1:4
-c(1, 2, 3, 4)
-1:999999
-datos |> slice(5:15)
-1990:2026
 
-datos |> slice(1, 2, 3)
-
-datos |> slice(1:10)
-
-
+# pull() extrae una columna como un vector simple (no como tabla)
 datos |> pull(comuna)
 
-datos_mini <- datos |> 
-  select(region, comuna, porcentaje, personas)
 
-datos_mini
+# contar categorías ----
+# count() cuenta cuántas filas hay en cada categoría de una columna
+
+# cuántas comunas hay por región
+datos |> count(region)
+
+# como hay una fila por comuna, el conteo de cada comuna es 1
+datos |> count(comuna)
+
+# print(n = ...) permite imprimir más filas de las que se muestran por defecto
+datos |> count(comuna) |> print(n = 20)
 
 
+# crear un ranking encadenando funciones ----
+# combinamos varias funciones para obtener las comunas con mayor pobreza
 
-
+# guardamos en un objeto cuántas comunas queremos en el ranking
 top <- 3
 
-top_comunas <- datos |> 
-  arrange(desc(porcentaje)) |> 
-  select(region, comuna, porcentaje, personas) |> 
-  slice(1:top) |> 
+# ordenamos, seleccionamos columnas, tomamos las primeras filas y extraemos la comuna
+top_comunas <- datos |>
+  arrange(desc(porcentaje)) |>
+  select(region, comuna, porcentaje) |>
+  slice(1:top) |>
   pull(comuna)
 
 top_comunas
 
+# unimos los nombres en un solo texto separado por comas
 texto_comunas <- paste(top_comunas, collapse = ", ")
 
-paste("las", 
-      top, 
-      "comunas con mayor porcentaje de pobreza son:", 
-      texto_comunas
-)
-
-datos |> 
-  count(region)
-
-datos |> 
-  count(comuna) |> 
-  filter(n > 1)
-
-datos |> 
-  count(comuna) |> 
-  print(n = 1000)
-
-datos |> 
-  print(n = Inf)
+paste("las", top, "comunas con mayor porcentaje de pobreza son:", texto_comunas)
 
 
+# trabajar con texto: {stringr} ----
+# el paquete {stringr} entrega funciones para trabajar con texto
 
-
+# str_detect() detecta si un texto contiene cierto patrón (TRUE/FALSE)
 texto <- "mapache"
-
 str_detect(texto, "a")
 
-datos |> 
-  filter(str_detect(region, "Metro"))
+# es muy útil dentro de filter() para buscar sin saber el nombre exacto
+datos |> filter(str_detect(region, "Metro"))
+datos |> filter(str_detect(comuna, "Alto"))
 
-datos |> 
-  filter(str_detect(comuna, "Florida"))
-
-datos |> 
-  filter(str_detect(comuna, "Alto"))
-
-
+# str_remove() y str_remove_all() eliminan texto que coincida con un patrón
 texto <- "Región Metropolitana de Santiago"
 
-texto |> 
-  str_remove("Región") |> 
-  str_remove("de Santiago") |> 
+texto |>
+  str_remove("Región") |>
+  str_remove("de Santiago") |>
   str_remove_all(" ")
 
-
+# str_replace() reemplaza un texto por otro
 comunas <- c("Cerrillos", "Maipú", "Nunoa")
-
 str_replace(comunas, "Nunoa", "Ñuñoa")
 
-str_replace(comunas, "a", "o")
+
+# excluir filas ----
+
+# filtrar dejando fuera una región: con != o con filter_out()
+datos |> filter(region != "Tarapacá")
+datos |> filter_out(region == "Tarapacá")
 
 
-datos |> 
-  select(codigo)
+# renombrar y reordenar columnas ----
 
-datos |> 
-  select(1, 2, 3)
+# rename() cambia el nombre de una columna (nombre_nuevo = nombre_viejo)
+datos |> rename(censo = personas_proy)
 
-datos |> 
-  select(1:4)
+# relocate() cambia el orden de las columnas
+datos |> relocate(personas_proy, .after = porcentaje)
 
-datos |> 
-  select(1:3, 8)
-
-datos |> 
-  select(-codigo)
-
-datos |> 
-  select(where(is.numeric))
-
-datos |> 
-  select(comuna, where(is.numeric))
-
-datos |> 
-  select(starts_with("limite"))
-
-datos |> 
-  select(-starts_with("limite"))
-
-datos |> 
-  filter(region == "Tarapacá")
-
-datos |> 
-  filter(region != "Tarapacá")
-
-datos |> 
-  filter_out(region == "Tarapacá")
-
-# 4 == 5 # comparar
-# edad = 34 # objetos y argumentos de funciones
-
-datos |> 
-  rename(censo = personas_proy)
-
+# podemos encadenar ambas
 datos |>
-  relocate(personas_proy, .after = porcentaje)
-
-datos |>
-  rename(censo = personas_proy) |> 
+  rename(censo = personas_proy) |>
   relocate(censo, .after = porcentaje)
-
-datos |>
-  rename(censo = personas_proy) |> 
-  relocate(censo, .after = 4)
-
-
-datos |> 
-  select(1:3, 5) |> 
-  mutate(ejemplo = "hola")
-
-datos |> 
-  select(1:3, 5) |> 
-  mutate(ejemplo = "hola") |> 
-  mutate(copia = personas)
-
-datos |> 
-  select(1:3, 5) |> 
-  mutate(ejemplo = "hola") |> 
-  mutate(copia = personas) |> 
-  mutate(miles = personas/1000)
-
-# ordenar datos
-datos_m <- datos |> 
-  rename(censo = personas_proy) |> 
-  select(region, comuna, censo, personas) |> 
-  mutate(miles = personas/1000)
-
-# calcular porcentar
-datos_p <- datos_m |> 
-  mutate(porcentaje = personas/censo) |> 
-  mutate(porcentaje = porcentaje * 100)
-
-datos_p |> 
-  mutate(personas = 0) -> datos_p2 # cursed
-
-datos_p |> 
-  mutate(miles = round(miles, 0))
-
-
-trabajos <- tibble(
-  persona = c(1, 2, 3, 4, 5),
-  empleo = c(
-    "sociólogo",
-    "Socióloga",
-    "soy sociólogo",
-    "socioloco",
-    "Sociólogx"
-  )
-)
-
-library(stringr)
-
-trabajos |> 
-  mutate(sociologx = empleo == "sociólogo")
-
-trabajos |> 
-  mutate(sociologx = str_detect(empleo, "sociólogo"))
-
-trabajos |> 
-  mutate(empleo = str_to_lower(empleo)) |> 
-  mutate(sociologx = str_detect(empleo, "sociólog"))
-
-trabajos |> 
-  mutate(empleo = str_to_lower(empleo)) |> 
-  mutate(sociologx = str_detect(empleo, "sociólog|socioloco"))
-
-trabajos |> 
-  mutate(empleo = str_to_lower(empleo)) |> 
-  mutate(empleo = str_replace(empleo, "socio", "soció")) |> 
-  mutate(empleo = str_replace(empleo, "socióloco", "sociólogo")) |> 
-  mutate(sociologx = str_detect(empleo, "sociólog"))
-
-
-datos_cat <- datos_p |> 
-  mutate(nivel = ifelse(
-    porcentaje > 20,
-    yes = "Alto",
-    no = "Bajo"
-  )
-  )
-
-datos_cat |> 
-  count(nivel)
-
-datos_cat |> 
-  count(region, nivel) |> 
-  filter(nivel == "Alto") |> 
-  arrange(desc(n)) |> 
-  rename(n_comunas_alta_pobreza = n)
-
-
-datos_cat |> 
-  slice_sample(n = 10) |> 
-  mutate(feas = case_when(
-    region == "Metropolitana" ~ "Fea"
-  )
-  )
-
-
-datos_cat |> 
-  # slice_sample(n = 10) |> 
-  mutate(feas = case_when(
-    region == "Metropolitana" ~ "Fea",
-    region == "Los Lagos" ~ "Linda",
-    region == "Valparaíso" ~ "Horrible"
-  )
-  )
-
-datos_cat |> 
-  # slice_sample(n = 10) |> 
-  mutate(nivel_2 = case_when(
-    porcentaje > 30 ~ "Alto",
-    porcentaje > 20 ~ "Medio",
-    porcentaje > 10 ~ "Bajo",
-    porcentaje <= 10 ~ "Muy bajo")
-  ) # |> count(nivel_2)
-
-datos_cat_2 <- datos_cat |> 
-  mutate(nivel_2 = case_when(
-    porcentaje > 30 ~ "Alto",
-    porcentaje > 20 ~ "Medio",
-    porcentaje > 10 ~ "Bajo",
-    porcentaje <= 10 ~ "Muy bajo")
-  )
-
-
-
-edad <- 30
-
-ifelse(edad > 18, "mayor", "menor")
-
-edades <- c(17, 30, 31, 32, 44)
-
-ifelse(edades > 18, "mayor", "menor")
-
-datos_cat$porcentaje
-datos_cat |> pull(porcentaje)
-
-datos_cat |> 
-  mutate(total = sum(personas))
-
-datos_cat |> 
-  summarise(sum(personas))
-
-datos_cat |> 
-  group_by(region) |> 
-  summarise(total_personas = sum(personas))
-
-datos_cat |> 
-  group_by(region) |> 
-  summarise(
-    total_personas = sum(personas),
-    total_censo = sum(censo),
-    )
-
-datos_cat_2 |> 
-  group_by(nivel_2) |> 
-  summarise(
-    total_personas = sum(personas),
-    total_censo = sum(censo),
-  )
-
-datos_cat_2 |> 
-  group_by(nivel_2) |> 
-  summarise(
-    total_personas = sum(personas),
-    total_censo = sum(censo),
-    n_comunas = n()
-  )
-
-datos_cat_2
-
-
-
-educacion <- read_xlsx("educacion.xlsx")
-
-educacion |> glimpse()
-
-educacion |> 
-  count(region)
-
-educacion |> 
-  count(sexo)
-
-educacion_2 <- educacion |> 
-  filter_out(region == "País") |> 
-  filter_out(sexo == "Total Comuna") |> 
-  filter_out(sexo == "Total País")
-
-educacion_2 |> 
-  filter(comuna == "Puente Alto")
-
-educacion |> 
-  filter(sexo == "Total Comuna") |> 
-  group_by(region) |> 
-  summarize(escolaridad = mean(escolaridad))
-
-
-clasificacion <- read_xlsx("clasificacion.xlsx")
-
-clasificacion_2 <- clasificacion |> 
-  select(comuna, clasificacion)
-
-clasificacion_2
-
-datos_cat |> 
-  left_join(clasificacion_2)
-
-datos_cat
-clasificacion_2
-
-# arreglar las comunas de la tabla de clasificación
-clasificacion_3 <- clasificacion_2 |> 
-  mutate(comuna = str_to_title(comuna)) |> 
-  mutate(comuna = str_replace(comuna, "O'higgins", "O’higgins"))
-
-datos_cat |>
-  filter(str_detect(comuna, "iggins"))
-
-clasificacion_3 |>
-  filter(str_detect(comuna, "iggins"))
-
-# las dos tablas a cruzar
-datos_cat
-
-clasificacion_3
-
-# revisar que son la misma cantidad
-n_comunas_tabla_a <- datos_cat |> 
-  distinct(comuna) |> 
-  nrow()
-
-n_comunas_tabla_b <- clasificacion_3 |> 
-  distinct(comuna) |> 
-  nrow()
-
-n_comunas_tabla_a == n_comunas_tabla_b
-
-
-# cruzar tablas
-datos_cruce <- datos_cat |> 
-  left_join(clasificacion_3)
-
-datos_cruce
-
-datos_cruce
-
-datos_cruce |> 
-  count(clasificacion)
-
-datos_cruce |> 
-  distinct(clasificacion)
-
-datos_cruce |> 
-  filter(is.na(clasificacion))
-
-datos_cruce |> 
-  summarize(sum(personas))
-
-datos_cruce |> 
-  group_by(clasificacion) |> 
-  summarize(sum(personas))
-
-datos_cruce |> 
-  group_by(clasificacion)
-  
-datos_cruce |> 
-  mutate(total = sum(personas))
-
-datos_cruce |> 
-  group_by(region) |> 
-  mutate(total = sum(personas))
-
-datos_rank <- datos_cruce |> 
-  # select(region, personas) |> 
-  arrange(region, desc(personas)) |> 
-  group_by(region) |> 
-  mutate(ranking = 1:n()) |> 
-  ungroup() |> 
-  print(n=40)
-
-datos_rank |> 
-  filter(ranking <= 3)
-
-
-datos_rank |> 
-  select(region, comuna, personas, clasificacion) |> 
-  pivot_wider(names_from = clasificacion, values_from = personas)
-

@@ -4,7 +4,7 @@
 
 Diapositivas: https://bastianolea.github.io/curso_intro_R_3/
 
-Información e inscripciones: https://bastianolea.rbind.io/blog/curso_r_intro_3/
+Más información: https://bastianolea.rbind.io/blog/curso_r_intro_3/
 
 ## Código de conducta
 
